@@ -39,7 +39,7 @@ if(synth.onvoiceschanged !== undefined) {
 // Speak
 const speak = () => {
     // Add background animation
-    body.style.background = '#141414 url(./img/wave.gif)';
+    body.style.background = '#141414 url(/img/wave.gif)';
     body.style.backgroundRepeat = 'repeat-x';
     body.style.backgroundSize = '100% 100%';
     // Check if speaking
@@ -53,6 +53,7 @@ const speak = () => {
         // speak end
         speakText.onend = e => {
             console.log('Done speaking...');
+            body.style.background = '#141414';
         }
 
         // Speak error
